@@ -1,4 +1,4 @@
-# Last-Modified Header and 304 Not Modified Handler for Laravel
+# Last-Modified / 304 Not Modified Handler for Laravel
 
 Easily setting the `Last-Modified` header and `304 Not Modified` response code if the page hasn't changed since the last visit.
 
