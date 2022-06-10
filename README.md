@@ -2,49 +2,39 @@
 
 Easily setting the `Last-Modified` header and `304 Not Modified` response code if the page hasn't changed since the last visit.
 
-[//]: # (<p style="text-align: center;">)
+<p style="text-align: center;">
 
-[//]: # ()
-[//]: # (<a href="https://packagist.org/packages/abordage/laravel-last-modified" title="Packagist version">)
 
-[//]: # (    <img alt="Packagist Version" src="https://img.shields.io/packagist/v/abordage/laravel-last-modified">)
+<a href="https://packagist.org/packages/abordage/laravel-last-modified" title="Packagist version">
+    <img alt="Packagist Version" src="https://img.shields.io/packagist/v/abordage/laravel-last-modified">
+</a>
 
-[//]: # (</a>)
 
-[//]: # ()
-[//]: # ()
-[//]: # (<a href="https://github.com/abordage/laravel-last-modified/blob/master/README.md" title="License">)
 
-[//]: # (    <img alt="License" src="https://img.shields.io/github/license/abordage/laravel-last-modified">)
+<a href="https://github.com/abordage/laravel-last-modified/blob/master/README.md" title="License">
+    <img alt="License" src="https://img.shields.io/github/license/abordage/laravel-last-modified">
+</a>
 
-[//]: # (</a>)
 
-[//]: # ()
-[//]: # ()
-[//]: # (<a href="https://github.com/abordage/laravel-last-modified/actions/workflows/tests.yml" title="GitHub Tests Status">)
 
-[//]: # (    <img alt="GitHub Tests Status" src="https://img.shields.io/github/workflow/status/abordage/laravel-last-modified/tests?label=tests">)
+<a href="https://github.com/abordage/laravel-last-modified/actions/workflows/tests.yml" title="GitHub Tests Status">
+    <img alt="GitHub Tests Status" src="https://img.shields.io/github/workflow/status/abordage/laravel-last-modified/tests?label=tests">
+</a>
 
-[//]: # (</a>)
 
-[//]: # ()
-[//]: # ()
-[//]: # (<a href="https://github.com/abordage/laravel-last-modified/actions/workflows/tests.yml" title="GitHub Code Style Status">)
 
-[//]: # (    <img alt="GitHub Code Style Status" src="https://img.shields.io/github/workflow/status/abordage/laravel-last-modified/php-cs-fixer?label=code%20style">)
+<a href="https://github.com/abordage/laravel-last-modified/actions/workflows/tests.yml" title="GitHub Code Style Status">
+    <img alt="GitHub Code Style Status" src="https://img.shields.io/github/workflow/status/abordage/laravel-last-modified/php-cs-fixer?label=code%20style">
+</a>
 
-[//]: # (</a>)
 
-[//]: # ()
-[//]: # ()
-[//]: # (<a href="https://www.php.net/" title="PHP version">)
 
-[//]: # (    <img alt="Packagist PHP Version Support" src="https://img.shields.io/packagist/php-v/abordage/laravel-last-modified">)
+<a href="https://www.php.net/" title="PHP version">
+    <img alt="Packagist PHP Version Support" src="https://img.shields.io/packagist/php-v/abordage/laravel-last-modified">
+</a>
 
-[//]: # (</a>)
 
-[//]: # ()
-[//]: # (</p>)
+</p>
 
 
 ## Requirements
