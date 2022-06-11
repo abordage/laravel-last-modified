@@ -8,9 +8,9 @@ class LastModified
 {
     private ?Carbon $updatedAt = null;
 
-    public function set(?Carbon $updated_at): void
+    public function set(?Carbon $updatedAt): void
     {
-        $this->updatedAt = $updated_at;
+        $this->updatedAt = $updatedAt;
     }
 
     public function get(): ?Carbon

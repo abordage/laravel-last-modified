@@ -24,9 +24,6 @@ class LastModifiedServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/last-modified.php', 'last-modified');
-
-        $this->app->singleton('laravel-last-modified', function () {
-            return new LastModified();
-        });
+        $this->app->singleton('laravel-last-modified', fn () => new LastModified());
     }
 }
