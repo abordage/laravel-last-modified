@@ -13,6 +13,10 @@ Easily setting the `Last-Modified` header and `304 Not Modified` response code i
     <img alt="Packagist Version" src="https://img.shields.io/packagist/v/abordage/laravel-last-modified">
 </a>
 
+<a href="https://github.com/abordage/laravel-last-modified/blob/master/LICENSE.md" title="License">
+    <img alt="License" src="https://img.shields.io/github/license/abordage/laravel-last-modified">
+</a>
+
 <a href="https://github.com/abordage/laravel-last-modified/actions/workflows/tests.yml" title="GitHub Tests Status">
     <img alt="GitHub Tests Status" src="https://img.shields.io/github/workflow/status/abordage/laravel-last-modified/Tests?label=tests">
 </a>
@@ -23,10 +27,6 @@ Easily setting the `Last-Modified` header and `304 Not Modified` response code i
 
 <a href="https://www.php.net/" title="PHP version">
     <img alt="Packagist PHP Version Support" src="https://img.shields.io/packagist/php-v/abordage/laravel-last-modified">
-</a>
-
-<a href="https://github.com/abordage/laravel-last-modified/blob/master/LICENSE.md" title="License">
-    <img alt="License" src="https://img.shields.io/github/license/abordage/laravel-last-modified">
 </a>
 
 </p>
@@ -105,7 +105,7 @@ or
 ```bash
 composer test:phpunit
 composer test:phpstan
-composer test:phpcs
+composer test:phpcsf
 ```
 
 ## Feedback
