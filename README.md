@@ -3,7 +3,7 @@
 Easily setting the `Last-Modified` header and `304 Not Modified` response code if the page hasn't changed since the last visit.
 
 <p style="text-align: center;" align="center">
-    <img alt="Laravel Last-Modified" src="https://github.com/abordage/laravel-last-modified/blob/master/docs/images/abordage-laravel-last-modified-cover.png">
+    <img alt="Laravel Last-Modified" src="https://github.com/abordage/laravel-last-modified/blob/master/docs/images/abordage-laravel-last-modified-cover.png?raw=true">
 </p>
 
 
@@ -91,6 +91,15 @@ class PostController extends Controller
     }
 }
 ```
+
+## How to check headers
+
+You can check headers in the browser console under the `Network` tab (make sure `Disable Cache` is off) 
+or using https://last-modified.com/en
+
+<p style="text-align: center;" align="center">
+    <img alt="Check Last-Modified" src="https://github.com/abordage/laravel-last-modified/blob/master/docs/images/check-last-modified-rounded.png?raw=true">
+</p>
 
 ## Testing
 
