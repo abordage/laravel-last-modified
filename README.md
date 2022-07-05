@@ -2,9 +2,11 @@
 
 Easily setting the `Last-Modified` header and `304 Not Modified` response code if the page hasn't changed since the last visit.
 
-<p style="text-align: center;" align="center">
-    <img alt="Laravel Last-Modified" src="https://github.com/abordage/laravel-last-modified/blob/master/docs/images/abordage-laravel-last-modified-cover-rounded.png?raw=true">
-</p>
+[//]: # (<p style="text-align: center;" align="center">)
+
+[//]: # (    <img alt="Laravel Last-Modified" src="https://github.com/abordage/laravel-last-modified/blob/master/docs/images/abordage-laravel-last-modified-cover-rounded.png?raw=true">)
+
+[//]: # (</p>)
 
 
 <p style="text-align: center;" align="center">
