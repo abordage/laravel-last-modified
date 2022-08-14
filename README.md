@@ -1,13 +1,6 @@
 # Last-Modified / 304 Not Modified Handler for Laravel
 
-Easily setting the `Last-Modified` header and `304 Not Modified` response code if the page hasn't changed since the last visit.
-
-[//]: # (<p style="text-align: center;" align="center">)
-
-[//]: # (    <img alt="Laravel Last-Modified" src="https://github.com/abordage/laravel-last-modified/blob/master/docs/images/abordage-laravel-last-modified-cover-rounded.png?raw=true">)
-
-[//]: # (</p>)
-
+Easily setting the `Last-Modified` header and `304 Not Modified` response code.
 
 <p style="text-align: center;" align="center">
 
@@ -65,12 +58,10 @@ protected $middleware = [
         
         \Abordage\LastModified\Middleware\LastModifiedHandling::class,
     ],
-    
-    // ...
 ];
 ```
 
-### Set last update date in your Controller
+### Set Last Update Date in your Controller
 
 ```php
 <?php
@@ -78,14 +69,13 @@ protected $middleware = [
 namespace App\Http\Controllers;
  
 use App\Http\Controllers\Controller;
-use App\Models\Post;
 use LastModified;
  
 class PostController extends Controller
 {
     public function show($id)
     {
-        $post = Post::findOrFail($id);
+        $post = \App\Models\Post::findOrFail($id);
 
         LastModified::set($post->updated_at);
         
@@ -93,11 +83,15 @@ class PostController extends Controller
     }
 }
 ```
+It's all. Now you can check the headers.
 
 ## How to check headers
 
 You can check headers in the browser console under the `Network` tab (make sure `Disable Cache` is off) 
-or using https://last-modified.com/en
+
+**or** 
+
+using https://last-modified.com/en
 
 <p style="text-align: center;" align="center">
     <img alt="Check Last-Modified" src="https://github.com/abordage/laravel-last-modified/blob/master/docs/images/check-last-modified-rounded.png?raw=true">
