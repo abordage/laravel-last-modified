@@ -1,3 +1,5 @@
+<!--suppress HtmlDeprecatedAttribute -->
+
 # Last-Modified / 304 Not Modified Handler for Laravel
 
 Easily setting the `Last-Modified` header and `304 Not Modified` response code.
@@ -28,8 +30,8 @@ Easily setting the `Last-Modified` header and `304 Not Modified` response code.
 
 
 ## Requirements
-- PHP 7.4 or higher
-- Laravel 8+
+- PHP 7.4 - 8.2
+- Laravel 8.x - 10.x
 
 ## Installation
 
@@ -110,6 +112,8 @@ composer test:phpunit
 composer test:phpstan
 composer test:phpcsf
 ```
+
+or see https://github.com/abordage/laravel-last-modified/actions/workflows/tests.yml
 
 ## Feedback
 
