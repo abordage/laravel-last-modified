@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Abordage\LastModified\Tests;
 
 use Abordage\LastModified\Facades\LastModified;
@@ -10,9 +12,15 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 class LastModifiedHandlingTest extends Orchestra
 {
+    private array $headers;
+
     protected function setUp(): void
     {
         parent::setUp();
+
+        $this->headers = [
+            'If-Modified-Since' => now()->subHour()->toRfc7231String()
+        ];
 
         Route::any('/dummy-post-without-last-modified', function () {
             LastModified::set(null);
@@ -40,21 +48,33 @@ class LastModifiedHandlingTest extends Orchestra
         ];
     }
 
-    public function testHandle(): void
+    public function testWithoutIfModifiedSinceHeader(): void
     {
         $this->get('/dummy-post-without-last-modified')->assertOk();
         $this->get('/dummy-post-yesterday-update')->assertOk();
         $this->get('/dummy-post-today-update')->assertOk();
+    }
 
-        $headers = ['If-Modified-Since' => now()->subHour()->toRfc7231String()];
+    public function testWithIfModifiedSinceHeader(): void
+    {
+        $this->get('/dummy-post-without-last-modified', $this->headers)->assertOk();
+        $this->get('/dummy-post-today-update', $this->headers)->assertOk();
+    }
 
-        $this->get('/dummy-post-without-last-modified', $headers)->assertOk();
-        $this->get('/dummy-post-today-update', $headers)->assertOk();
+    public function testPostMethod(): void
+    {
+        $this->post('/dummy-post-yesterday-update', [], $this->headers)->assertOk();
+    }
 
-        $this->get('/dummy-post-yesterday-update', $headers)->assertStatus(304);
-        $this->post('/dummy-post-yesterday-update', [], $headers)->assertOk();
-
+    public function testDisableLastModified(): void
+    {
         config(['last-modified.enable' => false]);
-        $this->get('/dummy-post-yesterday-update', $headers)->assertOk();
+        $this->get('/dummy-post-yesterday-update', $this->headers)->assertOk();
+        config(['last-modified.enable' => true]);
+    }
+
+    public function test304(): void
+    {
+        $this->get('/dummy-post-yesterday-update', $this->headers)->assertStatus(304);
     }
 }

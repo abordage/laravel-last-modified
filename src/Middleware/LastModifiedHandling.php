@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Abordage\LastModified\Middleware;
 
 use Abordage\LastModified\Facades\LastModified;
