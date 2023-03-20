@@ -7,8 +7,8 @@ namespace Abordage\LastModified\Middleware;
 use Abordage\LastModified\Facades\LastModified;
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Carbon;
+use Symfony\Component\HttpFoundation\Response;
 
 class LastModifiedHandling
 {
