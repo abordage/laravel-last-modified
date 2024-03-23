@@ -30,8 +30,8 @@ Easily setting the `Last-Modified` header and `304 Not Modified` response code.
 
 
 ## Requirements
-- PHP 7.4 - 8.2
-- Laravel 8.x - 10.x
+- PHP 7.4 - 8.3
+- Laravel 8.x - 11.x
 
 ## Installation
 
