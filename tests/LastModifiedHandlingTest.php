@@ -19,7 +19,7 @@ class LastModifiedHandlingTest extends Orchestra
         parent::setUp();
 
         $this->headers = [
-            'If-Modified-Since' => now()->subHour()->toRfc7231String()
+            'If-Modified-Since' => now()->subHour()->toRfc7231String(),
         ];
 
         Route::any('/dummy-post-without-last-modified', function () {
