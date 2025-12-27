@@ -30,8 +30,8 @@ Easily setting the `Last-Modified` header and `304 Not Modified` response code.
 
 
 ## Requirements
-- PHP 7.4 - 8.3
-- Laravel 8.x - 11.x
+- PHP 8.2+
+- Laravel 11.x / 12.x
 
 ## Installation
 
@@ -52,15 +52,13 @@ The setup is very simple and consists of two steps:
 ### Registering middleware
 
 ```php
-// in app/Http/Kernel.php
+// in bootstrap/app.php
 
-protected $middleware = [
-    'web' => [
-        // other middleware
-        
+->withMiddleware(function (Middleware $middleware) {
+    $middleware->web(append: [
         \Abordage\LastModified\Middleware\LastModifiedHandling::class,
-    ],
-];
+    ]);
+})
 ```
 
 ### Set Last Update Date in your Controller
