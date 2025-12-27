@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-last-modified` will be documented in this file.
 
+## 1.0.0 - 2025-12-27
+
+### What's Changed
+
+* Laravel 12 support by @abordage in https://github.com/abordage/laravel-last-modified/pull/37
+
+**Full Changelog**: https://github.com/abordage/laravel-last-modified/compare/0.2.1...1.0.0
+
 ## 0.2.1 - 2024-03-23
 
 ### What's Changed
